@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Студія</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,20 +18,25 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
+    <title>Webstudio</title>
   </head>
   <body>
-    <!-- ----- HEADER --- -->
+  
+    <!-- HEADER -->
     <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
           <a href="./index.html" class="header-logo logo link">
             <span class="accent">Web</span>Studio</a>
-          <ul class="header-list list">
-            
-            <li class="header-item">
+          
+            <ul class="header-list list">
+              <li class="header-item">
               <a href="./index.html" class="header-link header-title link current"
                 >Studio</a>
-            </li>
+              </li>
 
             <li class="header-item">
               <a href="./portfolio.html" class="header-link header-title link"
@@ -44,45 +48,110 @@
             </li>
           </ul>
         </nav>
-
-        <address class="address">
+        <address class="header-address">
           <ul class="address-contact list">
             <li class="address-item">
               <a href="mailto:info@devstudio.com" class="address-link link subtitle"
                 >info@devstudio.com</a>
             </li>
-
+  
             <li class="address-item">
-              <a href="tel:+110001111111" class="address-link link subtitle"
-                >+11 (000) 111-11-11</a>
-            </li>
-          </ul>
-        </address>
+                <a href="tel:+110001111111" class="address-link link subtitle"
+                  >+11 (000) 111-11-11</a>
+              </li>
+            </ul>
+          </address>
+
+          <!-- MOBILE MENU -->
+          <button type="button" class="mobile-menu-open button" data-menu-open>
+            <svg class="mobile-menu-open-icon" width="32" height="22">
+              <use href="./images/sprite.svg#burger-icon"></use>
+            </svg>
+          </button> 
+      </div>
+      <div class="mobile-menu-wrap is-hidden" data-menu>
+        <div class="container mobile-menu-container">
+          <div>
+            <button type="button" class="modal-menu-close-button button" data-menu-close>
+              <svg class="modal-close-button-icon" width="8" height="8">
+                <use href="./images/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <nav class="mobile-menu-nav">
+              <ul class="mobile-menu-list list">
+                <li class="mobile-menu-item"><a href="./index.html" class="mobile-menu-link section-subtitle link">Studio</a></li>
+                <li class="mobile-menu-item"><a href="./portfolio.html" class="mobile-menu-link section-subtitle link">Portfolio</a></li>
+                <li class="mobile-menu-item"><a href="./index.html" class="mobile-menu-link section-subtitle link">Contacts</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <address class="mobile-menu-address ">
+              <ul class="mobile-menu-address-list list">
+                <li class="mobile-menu-address-item"><a href="tel:+110001111111" class="mobile-menu-tel link">+11 (000) 111-11-11</a></li>
+                <li class="mobile-menu-address-item"><a href="mailto:info@devstudio.com" class="mobile-menu-address-link link">info@devstudio.com</a></li>
+              </ul>
+            </address>
+            <ul class="mobile-soc-list list">
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
-    <main>
+  </main>
 
       <!-- ----- HERO --- -->
       <section class="hero">
         <div class="hero-container container">
-          <h1 class="hero-header">Effective Solutions for Your Business</h1>
-          <button data-modal-open type="button" class="mdl-button button">Order Service</button>
+          <h1 class="hero-header section-subtitle">Effective Solutions for Your Business</h1>
+          <button type="button" class="hero-button button" data-modal-open>Order Service</button>
         </div>
       </section>
 
-      <!-------OUR VALUES --- -->
+      <!-------VALUES --- -->
       <section class="values">
         <div class="container">
           <h2 class="visually-hidden">Our values</h2>
           <ul class="values-list list">
             <li class="value-items">
               <div class="value-icon-box">
-                <svg class="value-icon">
-                  <use href="./images/icons.svg#icon-antenna"></use>
+                <svg class="value-icon" width="64" height="64">
+                  <use href="./images/sprite.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h3 class="value-item item">Strategy</h3>
-              <p class="values-descr subtitle">
+              <h3 class="value-subtitle section-subtitle">Strategy</h3>
+              <p class="values-descr">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
@@ -90,12 +159,12 @@
 
             <li class="value-items">
               <div class="value-icon-box">
-                <svg class="value-icon">
-                  <use href="./images/icons.svg#icon-clock"></use>
+                <svg class="value-icon" width="64" height="64">
+                  <use href="./images/sprite.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="value-item item">Punctuality</h3>
-              <p class="values-descr subtitle">
+              <h3 class="value-subtitle section-subtitle">Punctuality</h3>
+              <p class="values-descr">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
@@ -103,12 +172,12 @@
 
             <li class="value-items">
               <div class="value-icon-box">
-                <svg class="value-icon">
-                  <use href="./images/icons.svg#icon-diagram"></use>
+                <svg class="value-icon"  width="64" height="64">
+                  <use href="./images/sprite.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="value-item item">Diligence</h3>
-              <p class="values-descr subtitle">
+              <h3 class="value-subtitle section-subtitle">Diligence</h3>
+              <p class="values-descr">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
               </p>
@@ -116,12 +185,12 @@
 
             <li class="values-items">
               <div class="value-icon-box">
-                <svg class="value-icon">
-                  <use href="./images/icons.svg#icon-astronaut"></use>
+                <svg class="value-icon"  width="64" height="64">
+                  <use href="./images/sprite.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3 class="value-item item">Technologies</h3>
-              <p class="values-descr subtitle">
+              <h3 class="value-subtitle section-subtitle">Technologies</h3>
+              <p class="values-descr">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -131,7 +200,7 @@
       </section>
 
       <!-- ----OCCUPATION  --- -->
-      <section class="occupation section">
+      <section class="occupation">
         <div class="container">
           <h2 class="occupation-header section-header">What are we doing</h2>
           <ul class="occupation-list list">
@@ -165,13 +234,14 @@
         </div>
       </section>
 
-      <!-- -----OUR TEAM ----->
-      <section class="team section">
-        <div class="container">
-          <h2 class="team-header section-header">Our Team</h2>
+      <!-- OUR TEAM  -->
+      <section class="team">
+        <div class="container small-container">
+          <h2 class="team-header section-subtitle">Our Team</h2>
           <ul class="team-list list">
             <li class="team-member">
                 <img
+                  srcset="./images/team-member-1.jpg 1x, ./images/team-member-1@2x.jpg 2x"
                   src="./images/team-member-1.jpg"
                   alt="A team member Mark Guerrero is smiling"
                   width="264"
@@ -184,7 +254,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-instagram"></use>
+                        <use href="./images/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
@@ -192,7 +262,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-twitter"></use>
+                        <use href="./images/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
@@ -200,7 +270,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-facebook"></use>
+                        <use href="./images/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
@@ -208,7 +278,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
+                        <use href="./images/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
                   </li>
@@ -218,6 +288,7 @@
 
             <li class="team-member">
               <img
+                srcset="./images/team-member-2.jpg 1x, ./images/team-member-2@2x.jpeg 2x"
                 src="./images/team-member-2.jpg"
                 alt="A team member Tom Ford is smiling"
                 width="264"
@@ -232,7 +303,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-instagram"></use>
+                        <use href="./images/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
@@ -240,7 +311,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-twitter"></use>
+                        <use href="./images/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
@@ -248,7 +319,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-facebook"></use>
+                        <use href="./images/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
@@ -256,7 +327,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
+                        <use href="./images/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
                   </li>
@@ -266,6 +337,7 @@
 
             <li class="team-member">
               <img
+                srcset="./images/team-member-3.jpg 1x, ./images/team-member-3@2x.jpeg 2x"
                 src="./images/team-member-3.jpg"
                 alt="A team member Camila Garcia is smiling"
                 width="264"
@@ -278,7 +350,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-instagram"></use>
+                        <use href="./images/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
@@ -286,7 +358,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-twitter"></use>
+                        <use href="./images/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
@@ -294,7 +366,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-facebook"></use>
+                        <use href="./images/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
@@ -302,7 +374,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
+                        <use href="./images/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
                   </li>
@@ -312,6 +384,7 @@
 
             <li class="team-member">
               <img
+                srcset="./images/team-member-4.jpg 1x, ./images/team-member-4@2x.jpeg 2x"
                 src="./images/team-member-4.jpg"
                 alt="A team member Daniel Wilson is smiling"
                 width="264"
@@ -324,7 +397,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-instagram"></use>
+                        <use href="./images/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
@@ -332,7 +405,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-twitter"></use>
+                        <use href="./images/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
@@ -340,7 +413,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-facebook"></use>
+                        <use href="./images/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
@@ -348,7 +421,7 @@
                   <li class="team-member-soc-item">
                     <a href="" class="team-member-soc-link link">
                       <svg class="team-member-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
+                        <use href="./images/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
                   </li>
@@ -360,14 +433,14 @@
       </section>
 
       <!-- ------- CUSTOMERS  -->
-      <section class="customers section">
+      <section class="customers customers-container">
         <div class="container">
-          <h2 class="customers-header section-header">Customers</h2>
+          <h2 class="customers-header section-subtitle">Customers</h2>
           <ul class="customers-list list">
             <li class="customers-item">
               <a href="" class="customers-link link">
                 <svg class="customers-icon" width="41" height="47">
-                  <use href="./images/icons.svg#icon-ya-co"></use>
+                  <use href="./images/sprite.svg#icon-ya-co"></use>
                 </svg>
               </a>
             </li>
@@ -375,7 +448,7 @@
             <li class="customers-item">
               <a href="" class="customers-link link">
                 <svg class="customers-icon" width="40" height="52">
-                  <use href="./images/icons.svg#icon-company"></use>
+                  <use href="./images/sprite.svg#icon-company"></use>
                 </svg>
               </a>
             </li>
@@ -383,7 +456,7 @@
             <li class="customers-item">
               <a href="" class="customers-link link">
                 <svg class="customers-icon" width="44" height="41">
-                  <use href="./images/icons.svg#icon-company1"></use>
+                  <use href="./images/sprite.svg#icon-company1"></use>
                 </svg>
               </a>
             </li>
@@ -391,7 +464,7 @@
             <li class="customers-item">
               <a href="" class="customers-link link">
                 <svg class="customers-icon" width="84" height="41">
-                  <use href="./images/icons.svg#icon-foster-peters"></use>
+                  <use href="./images/sprite.svg#icon-foster-peters"></use>
                 </svg>
               </a>
             </li>
@@ -399,7 +472,7 @@
             <li class="customers-item">
               <a href="" class="customers-link link">
                 <svg class="customers-icon" width="63" height="45">
-                  <use href="./images/icons.svg#icon-brand"></use>
+                  <use href="./images/sprite.svg#icon-brand"></use>
                 </svg>
               </a>
             </li>
@@ -407,7 +480,7 @@
             <li class="customers-item">
               <a href="" class="customers-link link">
                 <svg class="customers-icon" width="94" height="44">
-                  <use href="./images/icons.svg#icon-company2"></use>
+                  <use href="./images/sprite.svg#icon-company2"></use>
                 </svg>
               </a>
             </li>
@@ -418,7 +491,7 @@
 
     <!------FOOTER ------>
     <footer class="footer">
-      <div class="container footer-flex">
+      <div class="container footer-container">
         <div class="footer-descr-container">
           <a href="./index.html" class="footer-logo logo link"
             ><span class="accent">Web</span>Studio</a>
@@ -435,7 +508,7 @@
             <li class="footer-soc-item">
               <a href="" class="footer-soc-link link">
                 <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-instagram"></use>
+                  <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
@@ -443,7 +516,7 @@
             <li class="footer-soc-item">
               <a href="" class="footer-soc-link link">
                 <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-twitter"></use>
+                  <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -451,7 +524,7 @@
             <li class="footer-soc-item">
               <a href="" class="footer-soc-link link">
                 <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-facebook"></use>
+                  <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
@@ -459,14 +532,14 @@
             <li class="footer-soc-item">
               <a href="" class="footer-soc-link link">
                 <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
+                  <use href="./images/sprite.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
 
-<!-- Subscribe to the website-->
+<!-- Subscribe-->
 
         <div class="subscribe-box ">
           <p class="subscribe-title header-title">Subscribe</p>
@@ -480,7 +553,7 @@
             <button class="subscribe-submit button" type="submit">
               Subscribe
               <svg class="subscribe-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-frame"></use>
+                <use href="./images/sprite.svg#icon-frame"></use>
               </svg>
             </button>
           </form>
@@ -489,11 +562,11 @@
     </footer>
 
         <!------- MODAL WINDOW ------>
-        <div class="backdrop is-hidden" data-modal>
+        <!-- <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <button type="button" class="modal-close-button" data-modal-close>
               <svg class="modal-close-button-icon" width="8" height="8">
-                <use href="./images/icons.svg#icon-vector-2"></use>
+                <use href="./images/sprite.svg#cross"></use>
               </svg>
             </button>
             <p class="modal-title header-title">Leave your contacts and we will call you back</p>
@@ -512,7 +585,7 @@
                   required
                   />
                   <svg class="modal-input-icon" width="18" height="18">
-                    <use href="./images/icons.svg#icon-person"></use>
+                    <use href="./images/sprite.svg#icon-person"></use>
                   </svg>
                 </div>
               </div>
@@ -530,7 +603,7 @@
                   required
                   />
                   <svg class="modal-input-icon" width="18" height="24">
-                    <use href="./images/icons.svg#icon-phone"></use>
+                    <use href="./images/sprite.svg#icon-phone"></use>
                   </svg>
                 </div>
               </div>
@@ -547,7 +620,7 @@
                   required
                   />
                   <svg class="modal-input-icon" width="18" height="24">
-                    <use href="./images/icons.svg#icon-email"></use>
+                    <use href="./images/sprite.svg#icon-email"></use>
                   </svg>
                 </div>
               </div>
@@ -576,7 +649,7 @@
                 class="check-text input-text">
                 <span>
                   <svg class="check-icon" width="10" height="8">
-                    <use href="./images/icons.svg#icon-check"></use>
+                    <use href="./images/sprite.svg#icon-check"></use>
                   </svg>
                 </span>
                 I accept the terms and conditions of the&nbsp;<a href="" class="privacy-policy input-text">Privacy Policy</a></label>  
@@ -584,9 +657,10 @@
 
               <button type="submit" class="mdl-button button input-button">Send</button>
             </form>
-          </div>
+          </div> -->
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
 

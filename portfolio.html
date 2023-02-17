@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Портфоліо</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,28 +18,29 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
+    <title>Webstudio</title>
   </head>
   <body>
-    <!-----------HEADER  ----------->
+  
+    <!-- HEADER -->
     <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
           <a href="./index.html" class="header-logo logo link">
-            <span class="accent">Web</span>Studio</a
-          >
-          <ul class="header-list list">
-            <li class="header-item">
+            <span class="accent">Web</span>Studio</a>
+          
+            <ul class="header-list list">
+              <li class="header-item">
               <a href="./index.html" class="header-link header-title link"
-                >Studio</a
-              >
-            </li>
+                >Studio</a>
+              </li>
 
             <li class="header-item">
-              <a
-                href="./portfolio.html"
-                class="header-link header-title link current"
-                >Portfolio</a
-              >
+              <a href="./portfolio.html" class="header-link header-title link current"
+                >Portfolio</a>
             </li>
 
             <li class="header-item">
@@ -48,30 +48,92 @@
             </li>
           </ul>
         </nav>
-
-        <address class="address">
+        <address class="header-address">
           <ul class="address-contact list">
             <li class="address-item">
-              <a
-                href="mailto:info@devstudio.com"
-                class="address-link link subtitle"
-                >info@devstudio.com</a
-              >
+              <a href="mailto:info@devstudio.com" class="address-link link subtitle"
+                >info@devstudio.com</a>
             </li>
-
+  
             <li class="address-item">
-              <a href="tel:+110001111111" class="address-link link subtitle"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+                <a href="tel:+110001111111" class="address-link link subtitle"
+                  >+11 (000) 111-11-11</a>
+              </li>
+            </ul>
+          </address>
+
+          <!-- MOBILE MENU -->
+          <button type="button" class="mobile-menu-open button" data-menu-open>
+            <svg class="mobile-menu-open-icon" width="32" height="22">
+              <use href="./images/sprite.svg#burger-icon"></use>
+            </svg>
+          </button> 
+      </div>
+      <div class="mobile-menu-wrap is-hidden" data-menu>
+        <div class="container mobile-menu-container">
+          <div>
+            <button type="button" class="modal-menu-close-button button" data-menu-close>
+              <svg class="modal-close-button-icon" width="8" height="8">
+                <use href="./images/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <nav class="mobile-menu-nav">
+              <ul class="mobile-menu-list list">
+                <li class="mobile-menu-item"><a href="./index.html" class="mobile-menu-link section-subtitle link">Studio</a></li>
+                <li class="mobile-menu-item"><a href="./portfolio.html" class="mobile-menu-link section-subtitle link">Portfolio</a></li>
+                <li class="mobile-menu-item"><a href="./index.html" class="mobile-menu-link section-subtitle link">Contacts</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <address class="mobile-menu-address ">
+              <ul class="mobile-menu-address-list list">
+                <li class="mobile-menu-address-item"><a href="tel:+110001111111" class="mobile-menu-tel link">+11 (000) 111-11-11</a></li>
+                <li class="mobile-menu-address-item"><a href="mailto:info@devstudio.com" class="mobile-menu-address-link link">info@devstudio.com</a></li>
+              </ul>
+            </address>
+            <ul class="mobile-soc-list list">
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
-    <main>
+  </main>
       <!--------- PORTFOLIO  -------->
+      <!-- FILTERS -->
       <section class="portfolio">
-        <div class="container">
+        <div class="container potrfolio-container">
           <h1 class="visually-hidden">Portfolio</h1>
           <ul class="filter list">
             <li class="filter-item">
@@ -104,6 +166,28 @@
               <div class="project-item-link">
                 <a href="" class="link">
                   <div class="project-text-wrap">
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-1.jpg 1x,
+                          ./images/project-1-desktop@2x.jpeg 2x"
+                        media="(min-width: 1200px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-1-tablet@1x-min.jpeg 1x,
+                          ./images/project-1-tablet@2x.jpeg 2x
+                        "
+                        media="(min-width: 768px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-1-mobile@1x-min.jpeg 1x,
+                          ./images/project-1-mobile@2x.jpeg 2x
+                        "
+                        media="(max-width: 767px)"
+                        />
+                    </picture>
                     <img
                       src="./images/project-1.jpg"
                       alt="A banking app purple interface"
@@ -130,6 +214,28 @@
               <div class="project-item-link">
                 <a href="" class="link">
                   <div class="project-text-wrap">
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-2.jpg 1x,
+                          ./images/project-2-desktop@2x.jpeg 2x"
+                        media="(min-width: 1200px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-2-tablet@1x-min.jpeg 1x,
+                          ./images/project-2-tablet@2x.jpeg 2x
+                        "
+                        media="(min-width: 768px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-2-mobile@1x-min.jpeg 1x,
+                          ./images/project-2-mobile@2x.jpeg 2x
+                        "
+                        media="(max-width: 767px)"
+                        />
+                    </picture>
                     <img
                       src="./images/project-2.jpg"
                       alt="Phone and payment terminal"
@@ -154,6 +260,28 @@
               <div class="project-item-link">
                 <a href="" class="link">
                   <div class="project-text-wrap">
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-3.jpg 1x,
+                          ./images/project-3-desktop@2x.jpeg 2x"
+                        media="(min-width: 1200px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-3-tablet@1x-min.jpeg 1x,
+                          ./images/project-3-tablet@2x.jpeg 2x
+                        "
+                        media="(min-width: 768px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-3-mobile@1x-min.jpeg 1x,
+                          ./images/project-3-mobile@2x.jpeg 2x
+                        "
+                        media="(max-width: 767px)"
+                        />
+                    </picture>
                     <img
                       src="./images/project-3.jpg"
                       alt="A computer with a phone"
@@ -178,6 +306,28 @@
               <div class="project-item-link">
                 <a href="" class="link">
                   <div class="project-text-wrap">
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-4.jpg 1x,
+                          ./images/project-4-desktop@2x.jpeg 2x"
+                        media="(min-width: 1200px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-4-tablet@1x-min.jpeg 1x,
+                          ./images/project-4-tablet@2x.jpeg 2x
+                        "
+                        media="(min-width: 768px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-4-mobile@1x-min.jpeg 1x,
+                          ./images/project-4-mobile@2x.jpeg 2x
+                        "
+                        media="(max-width: 767px)"
+                        />
+                    </picture>
                     <img
                       src="./images/project-4.jpg"
                       alt="Steering wheel"
@@ -202,6 +352,28 @@
               <div class="project-item-link">
                 <a href="" class="link">
                   <div class="project-text-wrap">
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-5.jpg 1x,
+                          ./images/project-5-desktop@2x.jpeg 2x"
+                        media="(min-width: 1200px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-5-tablet@1x-min.jpeg 1x,
+                          ./images/project-5-tablet@2x.jpeg 2x
+                        "
+                        media="(min-width: 768px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-5-mobile@1x-min.jpeg 1x,
+                          ./images/project-5-mobile@2x.jpeg 2x
+                        "
+                        media="(max-width: 767px)"
+                        />
+                    </picture>
                     <img
                       src="./images/project-5.jpg"
                       alt="Phone screen illustrations"
@@ -226,6 +398,28 @@
               <div class="project-item-link">
                 <a href="" class="link">
                   <div class="project-text-wrap">
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-6.jpg 1x,
+                          ./images/project-6-desktop@2x.jpeg 2x"
+                        media="(min-width: 1200px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-6-tablet@1x-min.jpeg 1x,
+                          ./images/project-6-tablet@2x.jpeg 2x
+                        "
+                        media="(min-width: 768px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-6-mobile@1x-min.jpeg 1x,
+                          ./images/project-6-mobile@2x.jpeg 2x
+                        "
+                        media="(max-width: 767px)"
+                        />
+                    </picture>
                     <img
                       src="./images/project-6.jpg"
                       alt="A smiley girl wirh her phone"
@@ -250,6 +444,28 @@
               <div class="project-item-link">
                 <a href="" class="link">
                   <div class="project-text-wrap">
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-7.jpg 1x,
+                          ./images/project-7-desktop@2x.jpeg 2x"
+                        media="(min-width: 1200px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-7-tablet@1x-min.jpeg 1x,
+                          ./images/project-7-tablet@2x.jpeg 2x
+                        "
+                        media="(min-width: 768px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-7-mobile@1x-min.jpeg 1x,
+                          ./images/project-7-mobile@2x.jpeg 2x
+                        "
+                        media="(max-width: 767px)"
+                        />
+                    </picture>
                     <img
                       src="./images/project-7.jpg"
                       alt="People illustrate concepts"
@@ -276,6 +492,28 @@
               <div class="project-item-link">
                 <a href="" class="link">
                   <div class="project-text-wrap">
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-8.jpg 1x,
+                          ./images/project-8-desktop@2x.jpeg 2x"
+                        media="(min-width: 1200px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-8-tablet@1x-min.jpeg 1x,
+                          ./images/project-8-tablet@2x.jpeg 2x
+                        "
+                        media="(min-width: 768px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-8-mobile@1x-min.jpeg 1x,
+                          ./images/project-8-mobile@2x.jpeg 2x
+                        "
+                        media="(max-width: 767px)"
+                        />
+                    </picture>
                     <img
                       src="./images/project-8.jpg"
                       alt="a person with groceries"
@@ -300,6 +538,28 @@
               <div class="project-item-link">
                 <a href="" class="link">
                   <div class="project-text-wrap">
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-9.jpg 1x,
+                          ./images/project-9-desktop@2x.jpeg 2x"
+                        media="(min-width: 1200px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-9-tablet@1x-min.jpeg 1x,
+                          ./images/project-9-tablet@2x.jpeg 2x
+                        "
+                        media="(min-width: 768px)"
+                        />
+                        <source 
+                        srcset="
+                          ./images/project-9-mobile@1x-min.jpeg 1x,
+                          ./images/project-9-mobile@2x.jpeg 2x
+                        "
+                        media="(max-width: 767px)"
+                        />
+                    </picture>
                     <img
                       src="./images/project-9.jpg"
                       alt="Latte making"
@@ -326,11 +586,10 @@
 
     <!------FOOTER ------>
     <footer class="footer">
-      <div class="container footer-flex">
+      <div class="container footer-container">
         <div class="footer-descr-container">
           <a href="./index.html" class="footer-logo logo link"
-            ><span class="accent">Web</span>Studio</a
-          >
+            ><span class="accent">Web</span>Studio</a>
           <p class="footer-descr subtitle">
             Increase the flow of customers and sales for your business with
             digital marketing & growth solutions.
@@ -340,10 +599,11 @@
         <div class="footer-soc-container">
           <h3 class="footer-soc-title header-title">Social media</h3>
           <ul class="footer-soc-list list">
+
             <li class="footer-soc-item">
               <a href="" class="footer-soc-link link">
                 <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-instagram"></use>
+                  <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
@@ -351,7 +611,7 @@
             <li class="footer-soc-item">
               <a href="" class="footer-soc-link link">
                 <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-twitter"></use>
+                  <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -359,7 +619,7 @@
             <li class="footer-soc-item">
               <a href="" class="footer-soc-link link">
                 <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-facebook"></use>
+                  <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
@@ -367,16 +627,16 @@
             <li class="footer-soc-item">
               <a href="" class="footer-soc-link link">
                 <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
+                  <use href="./images/sprite.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
 
-        <!-- Subscribe to the website-->
+<!-- Subscribe-->
 
-        <div class="subscribe-box">
+        <div class="subscribe-box ">
           <p class="subscribe-title header-title">Subscribe</p>
           <form class="subscribe-form">
             <input
@@ -388,7 +648,7 @@
             <button class="subscribe-submit button" type="submit">
               Subscribe
               <svg class="subscribe-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-frame"></use>
+                <use href="./images/sprite.svg#icon-frame"></use>
               </svg>
             </button>
           </form>
@@ -396,6 +656,7 @@
       </div>
     </footer>
 
-    <script src="./js/modal.js"></script>
+    <!-- <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script> -->
   </body>
 </html>
